@@ -5,6 +5,7 @@ class Page extends ApplicationComponent
 {
   protected $contentFile;
   protected $vars = array();
+  protected $layout = "layout";
    
   public function addVar($var, $value)
   {
@@ -30,7 +31,7 @@ class Page extends ApplicationComponent
     $content = ob_get_clean();
      
     ob_start();
-    require __DIR__.'/../Templates/layout.html';
+    require __DIR__. '/../Templates/' . $this->layout .'.html';
     return ob_get_clean();
   }
    
@@ -42,6 +43,10 @@ class Page extends ApplicationComponent
     }
      
     $this->contentFile = $contentFile;
+  }
+
+  public function setLayout($layout) {
+    $this->layout = $layout;
   }
 }
 ?>

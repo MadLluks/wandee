@@ -1,0 +1,9 @@
+$doc = new DOMDocument();  
+$doc->load( 'allagents.xml' );  
+  
+$nodes = $doc->getElementsByTagName( "user-agent" );  
+  
+foreach($nodes as $ua) {  
+  $string = $ua->getElementsByTagName( "String" );  
+  echo $string->item(0)->nodeValue . "\n";  
+}  

@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 <routes>
-	<route url="/Wandee/" module="accueil" action="index" />
+	<route url="/Wandee/" module="cover" action="index" />
 	<route url="/Wandee/Accueil/" module="accueil" action="show" />
+	<route url="/Wandee/accueil/" module="accueil" action="show" />
 	<route url="/Wandee/Carte/" module="menu" action="show" />"
+	<route url="/Wandee/carte/" module="menu" action="show" />"
 	<route url="/Wandee/Reservation/" module="reservation" action="show" />
+	<route url="/Wandee/reservation/" module="reservation" action="show" />
 	<route url="/Wandee/Livredor/" module="goldBook" action="show" />
+	<route url="/Wandee/livredor/" module="goldBook" action="show" />
 	<route url="/Wandee/Contact/" module="contact" action="show" />
+	<route url="/Wandee/contact/" module="contact" action="show" />
+
+	<route url="/Wandee/Accueil" module="accueil" action="show" />
+	<route url="/Wandee/accueil" module="accueil" action="show" />
+	<route url="/Wandee/Carte" module="menu" action="show" />"
+	<route url="/Wandee/carte" module="menu" action="show" />"
+	<route url="/Wandee/Reservation" module="reservation" action="show" />
+	<route url="/Wandee/reservation" module="reservation" action="show" />
+	<route url="/Wandee/Livredor" module="goldBook" action="show" />
+	<route url="/Wandee/livredor" module="goldBook" action="show" />
+	<route url="/Wandee/Contact" module="contact" action="show" />
+	<route url="/Wandee/contact" module="contact" action="show" />
 </routes>

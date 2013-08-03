@@ -1,39 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
-  <head>
-    <title>
-      <?php if (!isset($title)) { ?>
-        Mon super site
-      <?php } else { echo $title; } ?>
-    </title>
-     
-    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
-     
-    <link rel="stylesheet" href="/css/Envision.css" type="text/css" />
-  </head>
-   
-  <body>
-    <div id="wrap">
-      <div id="header">
-      </div>
-       
-      <div  id="menu">
-        <ul>
-          <li><a href="/Wandee/Accueil/">Accueil</a></li>
-          <li><a href="/Wandee/Carte/">Carte</a></li>
-          <li><a href="/Wandee/Reservation/">Reservation</a></li>
-          <li><a href="/Wandee/Contact/">Contact</a></li>
-          <li><a href="/Wandee/Livredor/">Livre d'or</a></li>
-        </ul>
-      </div>
-       
-      <div id="content-wrap">
-        <div id="main">
-          <?php echo $content; ?>
-        </div>
-      </div>
-     
-      <div id="footer"></div>
-    </div>
-  </body>
+<head>
+  <title>
+    <?php if (!isset($title)) { ?>
+    Wandee
+    <?php } else { echo $title; } ?>
+  </title>
+
+  <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+
+  <link rel="stylesheet" href="../css/layout.css" type="text/css" />
+</head>
+
+<body>
+  <header class="borderTest">
+    <img src="../images/logo2.png" id="logo"/>
+  </header>
+  <div id='content' class="borderTest">
+    <nav id="firstMenu">
+      <ul>
+        <li <?php if(isset($accueil)){ ?> class="active" <?php } ?>><a href="/Wandee/Accueil/" id="accueil"><span>Accueil</span></a></li>
+        <li <?php if(isset($carte)){ ?> class="active" <?php } ?>><a href="/Wandee/Carte/" id="carte"><span>Carte</span></a></li>
+        <li <?php if(isset($reservation)){ ?> class="active" <?php } ?>><a href="/Wandee/Reservation/" id="reservation"><span>Reservation</span></a></li>
+        <li <?php if(isset($contact)){ ?> class="active" <?php } ?>><a href="/Wandee/Contact/" id="contact"><span>Contact</span></a></li>
+        <li <?php if(isset($livre)){ ?> class="active" <?php } ?>><a href="/Wandee/Livredor/" id="livre"><span>Livre d'or</span></a></li>
+      </ul>
+    </nav>
+    <section>
+      <?php echo $content; ?>
+    </section>
+  </div>
+  <footer class="borderTest">
+  </footer>
+</body>
 </html>
