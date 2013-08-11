@@ -9,12 +9,12 @@
 
   <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
 
-  <link rel="stylesheet" href="../css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/wandee/css/layout.css" type="text/css" />
 </head>
 
 <body>
   <header class="borderTest">
-    <img src="../images/logo2.png" id="logo"/>
+    <img src="/wandee/images/logo2.png" id="logo"/>
   </header>
   <div id='content' class="borderTest">
     <nav id="firstMenu">
@@ -26,9 +26,9 @@
         <li <?php if(isset($livre)){ ?> class="active" <?php } ?>><a href="/Wandee/Livredor/" id="livre"><span>Livre d'or</span></a></li>
       </ul>
     </nav>
-    <section>
+    <div>
       <?php echo $content; ?>
-    </section>
+    </div>
   </div>
   <footer class="borderTest">
   </footer>

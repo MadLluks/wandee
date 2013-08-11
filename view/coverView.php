@@ -3,7 +3,7 @@
 		<img src="images/logo.png" id="imgLogo" />
 	</div>
 	<div id="text">
-		<div id="resume">
+		<div id="resume" class='borderTest'>
 			<?php echo $text; ?>
 		</div>
 		<br />

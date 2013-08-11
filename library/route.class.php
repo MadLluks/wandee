@@ -54,6 +54,7 @@ class Route
   {
     if (is_string($url))
     {
+      echo $this->url;
       $this->url = $url;
     }
   }

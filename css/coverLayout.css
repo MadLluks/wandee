@@ -1,12 +1,20 @@
 body {
 	margin: 0px;
-	background-image: url("../images/IMG_1225.jpg");
-	background-repeat: no-repeat;
+	background: url("../images/IMG_1225.jpg") no-repeat top left fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 
 }
 
+.borderTest {
+	border-style: dashed;
+	border-width: 1px;
+}
+
 #coverCase {
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.8);
 	border-style: double;
 	border-width: 2px;
 	height: 200px;
@@ -37,4 +45,10 @@ body {
 #info {
 	position: absolute;
 	bottom: 0px;
+}
+
+#resume {
+	width: 90%;
+	margin-top: 10px;
+	padding: 5px;
 }
