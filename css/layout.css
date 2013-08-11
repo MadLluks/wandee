@@ -33,6 +33,7 @@ footer {
 #content {
 	margin-top: 15px;
 	min-height: 450px;
+	height: 100%;
 }
 
 #firstMenu {
@@ -129,9 +130,25 @@ footer {
 }
 
 #plats {
+	display: inline-block;
 	width: 88%;
-	float: left;
+	height: 100%;
+	min-height: 400px;
+	/*float: left;*/
 	margin-top: 7px;
 	margin-left: 10px;
 }
 
+#image {
+	display: block;
+	max-width: 500px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#description {
+	width: 80%;
+	min-height: 100px;
+	margin: auto;	
+	margin-top: 20px;
+}

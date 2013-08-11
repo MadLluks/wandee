@@ -15,7 +15,7 @@ abstract class Application
     
     $this->name = '';
 
-    //$this->user = new User($this);
+    $this->user = new User($this);
 
     //$this->config = new Config($this);
   }

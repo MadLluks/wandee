@@ -6,6 +6,10 @@
 		<li <?php if(isset($boissons)){ ?> class="active" <?php } ?>><a href='/Wandee/Carte/Boissons/'>boissons</a></li>
 	</ul>
 </nav>		
-<section id='plats' class='borderTest'>
-	<?php echo 'Vue du menu' ?>
-</section>
+<div id='plats' class='borderTest'>
+	<img id="image" class='borderTest'  src='/wandee/images/photo1.jpg'/>
+	<div id='description' class='borderTest'>
+		<h2>Description</h2>
+		<?php echo $description ?>
+	</div>
+</div>
