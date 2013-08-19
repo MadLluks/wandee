@@ -15,7 +15,7 @@ class menuController extends \Library\backcontroller
     $db = new \Library\DB;
     $manager = new \model\FoodManager($db->getInstance());
 
-      $resultat = $manager->getUnique($_GET['id']);
+    $resultat = $manager->getList('entrees');
 
     $this->page->addVar('infos', $resultat);
 

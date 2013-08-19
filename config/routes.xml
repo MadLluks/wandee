@@ -3,8 +3,8 @@
 	<route url="/wandee/" module="cover" action="index" />
 	<route url="/wandee/accueil/" module="accueil" action="show" />
 	<route url="/wandee/carte/" module="menu" action="showEntrees" />"
-	<route url="/wandee/carte/entrees-([0-9]+)/" module="menu" action="showEntrees" vars="id"/>"
-	<route url="/wandee/carte/plats/" module="menu" action="showPlats" />"
+	<route url="/wandee/carte/entrees/" module="menu" action="showEntrees" vars="id"/>"
+	<route url="/wandee/carte/plats/" module="menu" action="showPlats" vars="id" />"
 	<route url="/wandee/carte/desserts/" module="menu" action="showDesserts" />"
 	<route url="/wandee/carte/boissons/" module="menu" action="showBoissons" />"
 	<route url="/wandee/reservation/" module="reservation" action="show" />

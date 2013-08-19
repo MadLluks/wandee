@@ -7,4 +7,5 @@
 	</ul>
 </nav>		
 <div id='plats' class='borderTest'>
+	<?php var_dump($infos); ?>
 </div>

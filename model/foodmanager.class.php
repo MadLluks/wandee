@@ -17,22 +17,23 @@ class FoodManager {
 		$requete->bindValue(':type', 'entree');
 		$requete->execute();
 		$requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE , '\Library\Food');
-		$entreesList = $requete->fetchAll();
+		$this->entreesList = $requete->fetchAll();
+		
 
 		$requete->bindValue(':type', 'plat');
 		$requete->execute();
 		$requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE , '\Library\Food');
-		$platsList = $requete->fetchAll();
+		$this->platsList = $requete->fetchAll();
 
 		$requete->bindValue(':type', 'dessert');
 		$requete->execute();
 		$requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE , '\Library\Food');
-		$dessertsList = $requete->fetchAll();
+		$this->dessertsList = $requete->fetchAll();
 
 		$requete->bindValue(':type', 'boisson');
 		$requete->execute();
 		$requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE , '\Library\Food');
-		$boissonsList = $requete->fetchAll();
+		$this->boissonsList = $requete->fetchAll();
 }
 
 	public function addFood (Food $new) {
@@ -57,8 +58,7 @@ class FoodManager {
 	}
 
 	public function getList ($type) {
-		return $type.'List';
-
+		return $this->{$type.'List'};
 	}
 
 	public function getUnique ($id) {
