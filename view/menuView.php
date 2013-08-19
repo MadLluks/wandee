@@ -7,8 +7,4 @@
 	</ul>
 </nav>		
 <div id='plats' class='borderTest'>
-	<img id="image" class='borderTest'  src='/wandee/images/<?php echo $infos->getImageLink(); ?>'/>
-	<div id='description' class='borderTest'>
-		<h2>Description</h2>
-	</div>
 </div>

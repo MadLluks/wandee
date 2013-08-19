@@ -16,14 +16,24 @@ class FoodManager {
 
 		$requete->bindValue(':type', 'entree');
 		$requete->execute();
-
 		$requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE , '\Library\Food');
+		$entreesList = $requete->fetchAll();
 
-		$entreesList = $requete->fetch();
+		$requete->bindValue(':type', 'plat');
+		$requete->execute();
+		$requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE , '\Library\Food');
+		$platsList = $requete->fetchAll();
 
-		var_dump($entreesList);
+		$requete->bindValue(':type', 'dessert');
+		$requete->execute();
+		$requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE , '\Library\Food');
+		$dessertsList = $requete->fetchAll();
 
-	}
+		$requete->bindValue(':type', 'boisson');
+		$requete->execute();
+		$requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE , '\Library\Food');
+		$boissonsList = $requete->fetchAll();
+}
 
 	public function addFood (Food $new) {
 		$requete = $this->db->prepare('INSERT INTO plat 
