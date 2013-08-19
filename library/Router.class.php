@@ -39,7 +39,7 @@ class Router
             // La première valeur contient entièrement la chaine capturée (voir la doc sur preg_match).
             if ($key !== 0)
             {
-              $listVars[$varsNames[$key - 1]] = $match;
+              $listVars[$varsNames[$key-1]] = $match;
             }
           }
 

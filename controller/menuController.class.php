@@ -9,13 +9,21 @@ class menuController extends \Library\backcontroller
     $this->page->addVar('description', 'show');
     $this->page->setContentFile(__DIR__.'/../view/menuView.php');
 
-
   }
 
    public function executeShowEntrees() {
+    $db = new \Library\DB;
+    $manager = new \model\FoodManager($db->getInstance());
+
+    $resultat = $manager->getUnique($_GET['id']);
+
+    $this->page->addVar('infos', $resultat);
+
   	$this->page->addVar('carte', 'id="active"');
   	$this->page->addVar('entrees', 'id="active"');
-    $this->page->addVar('test', 'show');
+
+
+
     $this->page->setContentFile(__DIR__.'/../view/menuView.php');
   }
 

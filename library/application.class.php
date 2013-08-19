@@ -1,4 +1,5 @@
-<?php namespace Library;
+<?php 
+namespace Library;
 
 abstract class Application
 {
