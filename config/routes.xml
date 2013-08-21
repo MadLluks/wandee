@@ -8,6 +8,7 @@
 	<route url="/wandee/carte/desserts/" module="menu" action="showDesserts" />"
 	<route url="/wandee/carte/boissons/" module="menu" action="showBoissons" />"
 	<route url="/wandee/reservation/" module="reservation" action="show" />
+	<route url="/wandee/reservation/reserver/" module="reservation" action="reserver" />
 	<route url="/wandee/livredor/" module="goldBook" action="show" />
 	<route url="/wandee/contact/" module="contact" action="show" />
 </routes>

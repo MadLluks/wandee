@@ -57,31 +57,31 @@ class Food {
 	}
 
 	//GETTERS
-	public function getId ($valeur) {
+	public function getId () {
 		return $this->id;
 	}
 
-	public function getName ($valeur) {
+	public function getName () {
 		return $this->name;
 	}
 
-	public function getType ($valeur) {
+	public function getType () {
 		return $this->type;
 	}
 
-	public function getPrice1 ($valeur) {
+	public function getPrice1 () {
 		return $this->price1;
 	}
 
-	public function getPrice2 ($valeur) {
+	public function getPrice2 () {
 		return $this->price2;
 	}
 
-	public function getPrice3 ($valeur) {
+	public function getPrice3 () {
 		return $this->price3;
 	}
 
-	public function getImageLink ($valeur) {
+	public function getImageLink () {
 		return $this->imageLink;
 	}
 }
