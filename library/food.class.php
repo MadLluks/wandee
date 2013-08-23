@@ -9,6 +9,7 @@ class Food {
 	protected $price2;
 	protected $price3;
 	protected $imageLink;
+	protected $description;
 
 	public function __construct ($valeurs = array()) {
 		if(!empty($valeurs)) {
@@ -56,6 +57,10 @@ class Food {
 		$this->imageLink = $valeur;
 	}
 
+	public function setDescription($valeur) {
+		$this->description = $valeur;
+	}
+
 	//GETTERS
 	public function getId () {
 		return $this->id;
@@ -83,6 +88,10 @@ class Food {
 
 	public function getImageLink () {
 		return $this->imageLink;
+	}
+
+	public function getDescription () {
+		return $this->description;
 	}
 }
 

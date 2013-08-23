@@ -7,5 +7,22 @@
 	</ul>
 </nav>		
 <div id='plats' class='borderTest'>
-	<?php var_dump($infos); ?>
+
+	<?php echo $infos; ?>
+
+	<script type="text/javascript">
+	$(function() {
+		$('#1').load(function () {
+			Reference = $('.carroussel li:first-child');
+			NbElement = $('.carroussel li').length;
+			$(".carroussel")
+			.wrap('<div class="carroussel-conteneur"></div>')
+			.css("width", (Reference.width() * NbElement) );
+			$(".carroussel-conteneur")
+			.css("width",  Reference.width()  )
+			.css("height", Reference.height() )
+			.css("overflow", "hidden");
+		})
+	});
+	</script>
 </div>

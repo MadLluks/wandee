@@ -152,3 +152,25 @@ footer {
 	margin: auto;	
 	margin-top: 20px;
 }
+
+.carroussel {
+	height: auto;
+	margin:0;
+	padding:0;
+}
+
+.carroussel#imageLink {
+	height: 200px;
+}
+
+.carroussel li{
+	float: left;
+	width: 300px;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.carroussel-conteneur {
+	margin: auto;
+}
