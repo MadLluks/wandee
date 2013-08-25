@@ -4,6 +4,7 @@ namespace controller;
 class accueilController extends \Library\backcontroller
 {  
 	public function executeIndex() {
+		var_dump('i');
 		$this->page->addVar('test', 'index');
 		$this->page->setContentFile(__DIR__.'/../view/coverView.php');
 	}

@@ -92,10 +92,10 @@ CREATE TABLE IF NOT EXISTS reservation (
 -- Structure de la table reservation
 --
 CREATE TABLE IF NOT EXISTS mealreserved (
-  idReservation int NOT NULL,
-  idPlat int NOT NULL,
-  quantity int NOT NULL,
-  PRIMARY KEY (idReservation, idPlat)
+    idReservation int NOT NULL,
+    idPlat int NOT NULL,
+    quantity int NOT NULL,
+    PRIMARY KEY (idReservation, idPlat)
 );
 
 -- --------------------------------------------------------
@@ -104,10 +104,10 @@ CREATE TABLE IF NOT EXISTS mealreserved (
 -- Structure de la table user
 --
 CREATE TABLE IF NOT EXISTS user (
-  id int NOT NULL AUTO_INCREMENT,
-  login varchar(20) NOT NULL,
-  password varchar(50) NOT NULL,
-  PRIMARY KEY (id)
+    id int NOT NULL AUTO_INCREMENT,
+    login varchar(20) NOT NULL,
+    password varchar(50) NOT NULL,
+    PRIMARY KEY (id)
 );
 
 alter table mealreserved add constraint FK_idReservation_id foreign key (idReservation)

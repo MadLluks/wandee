@@ -24,7 +24,6 @@ class reservationController extends \Library\backcontroller
   }
 
   public function executeReserver() {
-    var_dump($_POST);
     $this->page->addVar('reservation', 'id="active"');
     $this->page->addVar('test', 'show');
     $this->page->addVar('recapitulatif', 'true');

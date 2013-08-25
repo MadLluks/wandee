@@ -58,8 +58,8 @@ class FoodManager {
 	}
 
 	public function getList ($type) {
-
-		$list = $this->{$type.'List'};
+		return $this->{$type.'List'};
+		/*$list = $this->{$type.'List'};
 
 		$phpImage = '<ul class=\'carroussel\' id=\'imageLink\'>';
 		$phpTitre = '<ul class=\'carroussel\' id=\'titre\'>';
@@ -84,7 +84,7 @@ class FoodManager {
 		$phpPrice3 .= '</ul>';		
 		$phpDescription .= '</ul>';
 
-		return $phpImage . $phpTitre . $phpPrice1 . $phpPrice2 . $phpPrice3 . $phpDescription;
+		return $phpImage . $phpTitre . $phpPrice1 . $phpPrice2 . $phpPrice3 . $phpDescription;*/
 
 	}
 
