@@ -11,18 +11,51 @@
 	<?php echo $infos; ?>
 
 	<script type="text/javascript">
-	$(function() {
-		$('#1').load(function () {
-			Reference = $('.carroussel li:first-child');
-			NbElement = $('.carroussel li').length;
-			$(".carroussel")
-			.wrap('<div class="carroussel-conteneur"></div>')
-			.css("width", (Reference.width() * NbElement) );
-			$(".carroussel-conteneur")
-			.css("width",  Reference.width()  )
-			.css("height", Reference.height() )
-			.css("overflow", "hidden");
-		})
+	$(function () {
+		$(".carroussel").each(function () {
+			$(this).children('li').each(function () {
+				$(this).css({
+					display: 'none'
+				});
+			});
+			$(this).children(':first').css({
+				display: 'inline-block'
+			});
+		});
+
+		if ( !$(".carroussel li:visible").first().prev().length ){
+			$("[name='<']").css('display', 'none');
+		}
+		if ( !$(".carroussel li:visible").first().next().length ){
+			$("[name='>']").css('display', 'none');
+		}
+
+		$("[name='>']").click(function() {
+			$(".carroussel li:visible").each(function () {
+				$(this).next().css('display', 'inline-block');
+				$(this).css('display', 'none');
+
+				if( !$(this).next().next().length ){
+					$("[name='>']").css('display', 'none');
+				}
+				$("[name='<']").css('display', 'inline-block');
+			});
+		});
+
+		$("[name='<']").click(function() {
+			$(".carroussel li:visible").each(function () {
+				$(this).prev().css('display', 'inline-block');
+				$(this).css('display', 'none');
+
+				if( !$(this).prev().prev().length ){
+					$("[name='<']").css('display', 'none');
+				}
+				$("[name='>']").css('display', 'inline-block');
+			});
+		});
 	});
+
 	</script>
+	<input type="button" name="<" value="<" />
+	<input type="button" name=">" value=">" />
 </div>

@@ -55,7 +55,7 @@ footer {
 	font-weight: bold;
 	background: transparent url("../images/nav_bg.png") repeat-x top left;
 	font-family: Arial, Helvetica, sans-serif;
-	border-bottom: 1px solid #000000;
+	border-bottom: 1px solid #sublile;
 	border-top: 1px solid #000000;
 }
 
@@ -158,18 +158,6 @@ footer {
 	padding:0;
 }
 
-.carroussel#imageLink {
-	height: 200px;
-}
-
-.carroussel li{
-	float: left;
-	width: 300px;
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-
-.carroussel-conteneur {
-	margin: auto;
+.carroussel li {
+	text-align: center;
 }
