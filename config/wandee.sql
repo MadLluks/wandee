@@ -16,10 +16,11 @@
 --
 -- Structure de la table plat
 --
+DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS mealreserved;
 DROP TABLE IF EXISTS plat;
 DROP TABLE IF EXISTS reservation;
-DROP TABLE IF EXISTS user;
+
 
 
 CREATE TABLE IF NOT EXISTS plat (
@@ -81,17 +82,18 @@ INSERT INTO plat (name, type, description, price1, price2, price3, piment, image
 
 CREATE TABLE IF NOT EXISTS reservation (
   id int NOT NULL AUTO_INCREMENT,
-  nom varchar(100) NOT NULL,
-  prenom varchar(100) NOT NULL,
+  name varchar(100) NOT NULL,
+  surname varchar(100) NOT NULL,
   email varchar(100) NOT NULL,
-  telephone int(10) NOT NULL,
+  number int(10) NOT NULL,
+  date timestamp NOT NULL,
   PRIMARY KEY (id)
 );
 
 --
 -- Structure de la table reservation
 --
-CREATE TABLE IF NOT EXISTS mealreserved (
+CREATE TABLE IF NOT EXISTS reservedmeal (
     idReservation int NOT NULL,
     idPlat int NOT NULL,
     quantity int NOT NULL,
@@ -110,8 +112,8 @@ CREATE TABLE IF NOT EXISTS user (
     PRIMARY KEY (id)
 );
 
-alter table mealreserved add constraint FK_idReservation_id foreign key (idReservation)
+alter table reservedmeal add constraint FK_idReservation_id foreign key (idReservation)
 references reservation (id) on delete restrict on update restrict;
 
-alter table mealreserved add constraint FK_idPlat_id foreign key (idPlat)
+alter table reservedmeal add constraint FK_idPlat_id foreign key (idPlat)
 references plat (id) on delete restrict on update restrict;

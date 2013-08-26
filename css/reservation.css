@@ -2,16 +2,27 @@
 	text-align: right;
 }
 
-.labelReservation {
-	display: block;
-	width:200px;
-	float:left;
-}
-
 #recapitulatif {
 	border: 1px solid;
 }
 
 .lastRow {
 	border-top: 1px solid;
+}
+
+.message {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.errorMessage {
+	background-color: red;
+}
+
+.confirmationMessage {
+	background-color: green;
+}
+
+.indication {
+	font-size: 11px;
 }

@@ -6,7 +6,7 @@ class coverController extends \Library\backcontroller
 	public function executeIndex() {
 		$this->page = new  \Library\Page($this->app);
 		$this->page->setLayout('coverLayout');
-var_dump('i');
+
 		$dom = new \DomDocument();
 		$dom->load(__DIR__ . '/../config/text.xml');
 
