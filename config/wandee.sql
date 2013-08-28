@@ -12,26 +12,27 @@
 --
 
 -- --------------------------------------------------------
-
+SET time_zone = "+02:00";
 --
 -- Structure de la table plat
 --
 DROP TABLE IF EXISTS user;
-DROP TABLE IF EXISTS mealreserved;
+DROP TABLE IF EXISTS reservedmeal;
 DROP TABLE IF EXISTS plat;
 DROP TABLE IF EXISTS reservation;
+DROP TABLE IF EXISTS goldbook;
 
 
 
 CREATE TABLE IF NOT EXISTS plat (
-  id int NOT NULL AUTO_INCREMENT,
-  name varchar(50) NOT NULL,
-  type varchar(10) NOT NULL,
-  description varchar(100) NOT NULL,
-  price1 decimal(10,2) NOT NULL,
-  price2 decimal(10,2) NOT NULL,
-  price3 decimal(10,2) NOT NULL,
-  piment int(2) NOT NULL,
+  id            int NOT NULL AUTO_INCREMENT,
+  name          varchar(50) NOT NULL,
+  type          varchar(10) NOT NULL,
+  description   varchar(100) NOT NULL,
+  price1        decimal(10,2) NOT NULL,
+  price2        decimal(10,2) NOT NULL,
+  price3        decimal(10,2) NOT NULL,
+  piment        int(2) NOT NULL,
   imageLink varchar(100) NOT NULL,
   PRIMARY KEY (id)
 );
@@ -81,12 +82,12 @@ INSERT INTO plat (name, type, description, price1, price2, price3, piment, image
 -- --------------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS reservation (
-  id int NOT NULL AUTO_INCREMENT,
-  name varchar(100) NOT NULL,
-  surname varchar(100) NOT NULL,
-  email varchar(100) NOT NULL,
-  number int(10) NOT NULL,
-  date timestamp NOT NULL,
+  id        int NOT NULL AUTO_INCREMENT,
+  name      varchar(100) NOT NULL,
+  surname   varchar(100) NOT NULL,
+  email     varchar(100) NOT NULL,
+  number    int(10) NOT NULL,
+  date      timestamp NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -94,9 +95,9 @@ CREATE TABLE IF NOT EXISTS reservation (
 -- Structure de la table reservation
 --
 CREATE TABLE IF NOT EXISTS reservedmeal (
-    idReservation int NOT NULL,
-    idPlat int NOT NULL,
-    quantity int NOT NULL,
+    idReservation   int NOT NULL,
+    idPlat          int NOT NULL,
+    quantity        int NOT NULL,
     PRIMARY KEY (idReservation, idPlat)
 );
 
@@ -106,9 +107,17 @@ CREATE TABLE IF NOT EXISTS reservedmeal (
 -- Structure de la table user
 --
 CREATE TABLE IF NOT EXISTS user (
-    id int NOT NULL AUTO_INCREMENT,
-    login varchar(20) NOT NULL,
-    password varchar(50) NOT NULL,
+    id          int NOT NULL AUTO_INCREMENT,
+    login       varchar(20) NOT NULL,
+    password    varchar(50) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS goldbook (
+    id          int NOT NULL AUTO_INCREMENT,
+    message     varchar(300) NOT NULL,
+    note        int(1) NOT NULL,
+    date        timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 );
 

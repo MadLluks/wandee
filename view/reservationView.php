@@ -24,76 +24,74 @@ if (isset($confirmation)) {
 }
 
 ?>
-<form method=POST 
-action="/Wandee/Reservation/Reserver/"
->
-<div id="formulaire">
-	<table>
-		<tr>
-			<td><label for="name">Nom : </label></td>
-			<td><input id="name" name="name" type="text"></input></td>
-			<td><span name="error_name">Vous devez saisir un nom.</span></td>
-		</tr>
+<form method=POST action="/Wandee/Reservation/Reserver/">
+	<div id="formulaire">
+		<table>
+			<tr>
+				<td><label for="name">Nom : </label></td>
+				<td><input id="name" name="name" type="text"></input></td>
+				<td><span name="error_name">Vous devez saisir un nom.</span></td>
+			</tr>
 
-		<tr>
-			<td><label for="surname">Prénom : </label></td>
-			<td><input id="surname" name="surname" type="text"></input></td>
-			<td><span name="error_surname">Vous devez saisir un prénom.</span></td>
-		</tr>
+			<tr>
+				<td><label for="surname">Prénom : </label></td>
+				<td><input id="surname" name="surname" type="text"></input></td>
+				<td><span name="error_surname">Vous devez saisir un prénom.</span></td>
+			</tr>
 
-		<tr>
-			<td><label for="number">Numéro de téléphone : </label></td>
-			<td><input id="number" name="number" type="text" maxlength=10></input></td>
-			<td><span name="error_number">Vous devez saisir un numéro de téléphone valide.</span></td>
-		</tr>
+			<tr>
+				<td><label for="number">Numéro de téléphone : </label></td>
+				<td><input id="number" name="number" type="text" maxlength=10></input></td>
+				<td><span name="error_number">Vous devez saisir un numéro de téléphone valide.</span></td>
+			</tr>
 
-		<tr>
-			<td><label for="email">Email : </label></td>
-			<td><input id="email" name="email" type="email"></input></td>
-			<td><span name="error_email">Vous devez saisir une adresse email valide.</span></td>
-		</tr>
+			<tr>
+				<td><label for="email">Email : </label></td>
+				<td><input id="email" name="email" type="email"></input></td>
+				<td><span name="error_email">Vous devez saisir une adresse email valide.</span></td>
+			</tr>
 
-		<tr>
-			<td><label class="labelDate" for="date">Date* : </label></td>
-			<td><input name="date" type="text" id="date" /></td>
-			<td><span name="error_date">Vous devez choisir une date.</span></td>
-		</tr>
-	</table>
-	<p class="indication">* indique le jour où vous venez récupérer votre commande. </p>
-	<p name="error_none">Vous devez sélectionner au moins un article.</p>
-	<?php 
-	foreach ($list as $nameList => $sousList) {
-		echo "<fieldset>";
-		echo "<legend>" . $nameList . "</legend>";
-		echo "<table>";
-		foreach($sousList as $key => $value) {
-			$name = $value->getName();
-			$id = $value->getId();
-			$price = $value->getPrice1();
-			echo "<tr>";
-			echo "<td><label id='" . $id . "' class='labelPlats'>" . $name . "</label></td>";
-			echo "<td><span>" . $price . " € </span></td>";
-			echo "<td><input id=quantity" . $id . " class='quantity' name='list[" . $id . "]' type='number' value='0' min='0' max='100'></td>";
-			echo "<td><input type='hidden' id='price_" . $id . "' value=" . $price . "></td>";
-			echo "</tr>";
+			<tr>
+				<td><label class="labelDate" for="date">Date* : </label></td>
+				<td><input name="date" type="text" id="date" /></td>
+				<td><span name="error_date">Vous devez choisir une date.</span></td>
+			</tr>
+		</table>
+		<p class="indication">* indique le jour où vous venez récupérer votre commande. </p>
+		<p name="error_none">Vous devez sélectionner au moins un article.</p>
+		<?php 
+		foreach ($list as $nameList => $sousList) {
+			echo "<fieldset>";
+			echo "<legend>" . $nameList . "</legend>";
+			echo "<table>";
+			foreach($sousList as $key => $value) {
+				$name = $value->getName();
+				$id = $value->getId();
+				$price = $value->getPrice1();
+				echo "<tr>";
+				echo "<td><label id='" . $id . "' class='labelPlats'>" . $name . "</label></td>";
+				echo "<td><span>" . $price . " € </span></td>";
+				echo "<td><input id=quantity" . $id . " class='quantity' name='list[" . $id . "]' type='number' value='0' min='0' max='100'></td>";
+				echo "<td><input type='hidden' id='price_" . $id . "' value=" . $price . "></td>";
+				echo "</tr>";
+			}
+			echo "</table>";
+			echo "</fieldset>";
 		}
-		echo "</table>";
-		echo "</fieldset>";
-	}
-	?>
-	<div class="total">
-		<label>Total :</label>
-		<span id="montantTotal">0 €</span>
-		<input type="hidden" name="montantTotal"></input>
-		<button type='button' onClick='afficherRecap()'>Réserver</button>
+		?>
+		<div class="total">
+			<label>Total :</label>
+			<span id="montantTotal">0 €</span>
+			<input type="hidden" name="montantTotal"></input>
+			<button type='button' onClick='afficherRecap()'>Réserver</button>
+		</div>
 	</div>
-</div>
-<table id='recapitulatif'>
+	<table id='recapitulatif'>
 
-</table>
-<div class="total">
-	<button type="submit" value="confirmer" id="confirmer">Confirmer</button>
-</div>
+	</table>
+	<div class="total">
+		<button type="submit" value="confirmer" id="confirmer">Confirmer</button>
+	</div>
 </form>
 
 
