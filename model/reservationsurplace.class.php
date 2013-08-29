@@ -1,22 +1,20 @@
 <?php
 namespace model;
 
-class Reservation {
+class ReservationSurPlace {
 	protected $id;
 	protected $name;
-	protected $surname;
 	protected $number;
-	protected $email;
 	protected $date;
 	protected $moment;
+	protected $nb;
 
-	public function __construct ($name, $surname, $number, $email, $date, $moment) {
+	public function __construct ($name, $number, $date, $moment, $nb) {
 		$this->name = $name;
-		$this->surname = $surname;
 		$this->number = $number;
-		$this->email = $email;
 		$this->date = $date;
 		$this->moment = $moment;
+		$this->nb = $nb;
 		/*if(!empty($valeurs)) {
 			$this->hydrate($valeurs);
 		}*/
@@ -41,16 +39,12 @@ class Reservation {
 		$this->name = htmlentities($valeur);
 	}
 
-	public function setSurname ($valeur) {
-		$this->surname = htmlentities($valeur);
+	public function setNb ($valeur) {
+		$this->nb = (int)($valeur);
 	}
 
 	public function setNumber ($valeur) {
 		$this->number = htmlentities($valeur);
-	}
-
-	public function setEmail ($valeur) {
-		$this->email = htmlentities($valeur);
 	}
 
 	public function setDate ($valeur) {
@@ -70,16 +64,12 @@ class Reservation {
 		return $this->name;
 	}
 
-	public function getSurname () {
-		return $this->surname;
+	public function getNb () {
+		return $this->nb;
 	}
 
 	public function getNumber () {
 		return $this->number;
-	}
-
-	public function getEmail () {
-		return $this->email;
 	}
 
 	public function getDate () {

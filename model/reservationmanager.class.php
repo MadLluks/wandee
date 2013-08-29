@@ -10,19 +10,21 @@ class ReservationManager {
 	}
 
 	public function addReservation (Reservation $new) {
-		$requete = $this->db->prepare('INSERT INTO reservation (name, surname, email, number, date) 
-			VALUES (:name, :surname, :email, :number, :date)');
+		$requete = $this->db->prepare('INSERT INTO reservation (name, surname, email, number, date, moment) 
+			VALUES (:name, :surname, :email, :number, :date, :moment)');
 
 		$name = $new->getName();
 		$surname = $new->getSurname();
 		$email = $new->getEmail();
 		$number = $new->getNumber();
 		$date = $new->getDate();
+		$moment = $new->getMoment();
 		$requete->bindValue(':name', $name);
 		$requete->bindValue(':surname', $surname);
 		$requete->bindValue(':email', $email);
 		$requete->bindValue(':number', $number);
 		$requete->bindValue(':date', $date);
+		$requete->bindValue(':moment', $moment);
 		$requete->execute();
 	}
 

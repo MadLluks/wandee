@@ -8,13 +8,22 @@
 	text-align: center;
 }
 
-.tableCommentaire {
-	margin: auto;
+.date {
+	width:150px;
 }
 
-.message {
-	width:400px;
+.note {
+	width:20px;
 }
+
+.tableCommentaire {
+	width:50%;
+	margin:auto;
+}
+
+/*.message {
+	width:400px;
+}*/
 
 .buttonPlus {
 	text-align: center;

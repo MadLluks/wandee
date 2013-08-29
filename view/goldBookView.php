@@ -11,7 +11,7 @@ if (isset($confirmation)) {
 	echo $confirmation;
 }
 ?>
-<form method=POST action="/wandee/livredor/ajouter/">
+<form method=POST action="/wandee/livredor/ajouter/" >
 	<div class="nouveauMessage">
 		<div class="notation">
 			<ul class="notes-echelle">
@@ -37,16 +37,17 @@ if (isset($confirmation)) {
 				</li>
 			</ul>
 		</div>
-		<br>
+		<br><br>
 		<textarea name="message" rows="4" cols="50" placeholder="Votre message"></textarea>
 		<br>
-		<input type="submit" value="Envoyer" id="envoyer"></input>
+		<input class="btn" type="submit" value="Envoyer" id="envoyer"></input>
 	</div>
 </form>
 
 <?php 
 if (isset($list)) {
-	echo "<table class='tableCommentaire'>";
+	echo "<table class='tableCommentaire table table-hover'>";
+	echo "<tbody>";
 	$i = 0;
 	foreach ($list as $key => $value) {
 		$i++;
@@ -56,15 +57,17 @@ if (isset($list)) {
 			echo "<tr>";
 		}
 		
-		echo "<td>" . $value['date'] . "</td>";
+		echo "<td class='date'>" . $value['date'] . "</td>";
 		echo "<td class='message'>" . $value['message'] . "</td>";
-		echo "<td>" . $value['note'] . "/5 </td>";
+		echo "<td class='note'>" . $value['note'] . "/5 </td>";
 		echo "</tr>";
 	}
+	echo "</tbody>";
 	echo "</table>";
+	echo "<div class='buttonPlus'>";
+	echo "<button class='btn' type='button' id='afficherPlus'>Afficher plus de commentaires</button>";
+	echo "</div>";
 }
 ?>
-<div class="buttonPlus">
-	<button type='button' id='afficherPlus'>Afficher plus de commentaires</button>
-</div>
+
 

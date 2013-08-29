@@ -21,7 +21,7 @@ DROP TABLE IF EXISTS reservedmeal;
 DROP TABLE IF EXISTS plat;
 DROP TABLE IF EXISTS reservation;
 DROP TABLE IF EXISTS goldbook;
-
+DROP TABLE IF EXISTS reservationsurplace;
 
 
 CREATE TABLE IF NOT EXISTS plat (
@@ -85,9 +85,10 @@ CREATE TABLE IF NOT EXISTS reservation (
   id        int NOT NULL AUTO_INCREMENT,
   name      varchar(100) NOT NULL,
   surname   varchar(100) NOT NULL,
-  email     varchar(100) NOT NULL,
+  email     varchar(100),
   number    int(10) NOT NULL,
-  date      timestamp NOT NULL,
+  date      date NOT NULL,
+  moment    varchar(10) NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -119,6 +120,16 @@ CREATE TABLE IF NOT EXISTS goldbook (
     note        int(1) NOT NULL,
     date        timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS reservationsurplace (
+  id        int NOT NULL AUTO_INCREMENT,
+  name      varchar(100) NOT NULL,
+  number    int(10) NOT NULL,
+  date      date NOT NULL,
+  moment    varchar(10) NOT NULL,
+  nb        int(2) NOT NULL,
+  PRIMARY KEY (id)
 );
 
 alter table reservedmeal add constraint FK_idReservation_id foreign key (idReservation)

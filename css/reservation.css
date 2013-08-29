@@ -2,9 +2,6 @@
 	text-align: right;
 }
 
-#recapitulatif {
-	border: 1px solid;
-}
 
 .lastRow {
 	border-top: 1px solid;
@@ -23,6 +20,24 @@
 	background-color: green;
 }
 
-.indication {
-	font-size: 11px;
+.quantity {
+	width:50px;
+}
+
+.label-nom {
+	min-width:220px;
+	margin-right: 10px;
+}
+
+select {
+	width:auto;
+}
+
+.boutonChoix {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#surPlace {
+	margin-left: 20%;
 }
