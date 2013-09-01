@@ -64,9 +64,11 @@ if (isset($list)) {
 	}
 	echo "</tbody>";
 	echo "</table>";
-	echo "<div class='buttonPlus'>";
-	echo "<button class='btn' type='button' id='afficherPlus'>Afficher plus de commentaires</button>";
-	echo "</div>";
+	if (count($list) > 10) {
+		echo "<div class='buttonPlus'>";
+		echo "<button class='btn' type='button' id='afficherPlus'>Afficher plus de commentaires</button>";
+		echo "</div>";	
+	}	
 }
 ?>
 

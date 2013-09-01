@@ -40,7 +40,6 @@ $(document).ready(function() {
 	$('[class=cacher]').css('display', 'none');
 
 	$('#afficherPlus').click(function() {
-		$('[class=cacher]:lt(10)').css('display', '');
 		$('[class=cacher]:lt(10)').removeClass('cacher');
 		if ($('[class=cacher]').length == 0) {
 			$('#afficherPlus').hide();

@@ -21,10 +21,9 @@
 	margin:auto;
 }
 
-/*.message {
-	width:400px;
-}*/
-
+.cacher {
+	display: none;
+}
 .buttonPlus {
 	text-align: center;
 }

@@ -1,0 +1,11 @@
+.coordonnees {
+	margin-top: 50px;
+	position: relative;
+	float: left;
+	width:50%;
+}
+
+.plan {
+	position: relative;
+	float: left;
+}

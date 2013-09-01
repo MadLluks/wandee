@@ -13,4 +13,5 @@
 	<route url="/wandee/livredor/" module="goldBook" action="show" />
 	<route url="/wandee/livredor/ajouter/" module="goldBook" action="ajouter" />
 	<route url="/wandee/contact/" module="contact" action="show" />
+	<route url="/wandee/contact/envoyermail/" module="contact" action="envoyerMail" />
 </routes>
