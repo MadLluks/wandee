@@ -16,4 +16,7 @@
 	<route url="/wandee/contact/envoyermail/" module="contact" action="envoyerMail" />
 
 	<route url="/wandee/adminplat/" module="adminPlat" action="show" />
+	<route url="/wandee/adminplat/add/" module="adminPlat" action="add" />
+	<route url="/wandee/adminplat/modify/" module="adminPlat" action="modify" />
+	<route url="/wandee/adminplat/delete/" module="adminPlat" action="delete" />
 </routes>

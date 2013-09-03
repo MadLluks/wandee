@@ -38,14 +38,12 @@ class FoodManager {
 
 	public function addFood (Food $new) {
 		$requete = $this->db->prepare('INSERT INTO plat 
-			SET nom=:nom, type=:type, description=:description, price1=:price1, price2=:price2, price3=:price3, imageLink=:imageLink');
+			SET nom=:nom, type=:type, description=:description, price=:price, imageLink=:imageLink');
 
 		$requete->bindValue(':nom', $new->getNom());
 		$requete->bindValue(':type', $new->getType());
 		$requete->bindValue(':description', $new->getDescription());
-		$requete->bindValue(':price1', $new->getPrice1());
-		$requete->bindValue(':price2', $new->getPrice2());
-		$requete->bindValue(':price3', $new->getPrice3());
+		$requete->bindValue(':price', $new->getPrice());
 		$requete->bindValue(':imageLink', $new->getImageLink());
 	}
 

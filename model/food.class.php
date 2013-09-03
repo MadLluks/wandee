@@ -5,9 +5,7 @@ class Food {
 	protected $id;
 	protected $name;
 	protected $type;
-	protected $price1;
-	protected $price2;
-	protected $price3;
+	protected $price;
 	protected $imageLink;
 
 	public function __construct ($valeurs = array()) {
@@ -40,16 +38,8 @@ class Food {
 		}
 	}
 
-	public function setPrice1 ($valeur) {
-		$this->price1 = (float) $valeur;
-	}
-
-	public function setPrice2 ($valeur) {
-		$this->price2 = (float) $valeur;
-	}
-
-	public function setPrice3 ($valeur) {
-		$this->price3 = (float) $valeur;
+	public function setPrice ($valeur) {
+		$this->price = (float) $valeur;
 	}
 
 	public function setImageLink ($valeur) {
@@ -69,16 +59,8 @@ class Food {
 		return $this->type;
 	}
 
-	public function getPrice1 () {
-		return $this->price1;
-	}
-
-	public function getPrice2 () {
-		return $this->price2;
-	}
-
-	public function getPrice3 () {
-		return $this->price3;
+	public function getPrice () {
+		return $this->price;
 	}
 
 	public function getImageLink () {
