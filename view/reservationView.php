@@ -92,6 +92,11 @@ if (isset($confirmation)) {
 					echo "<li><a data-toggle='tab' href='#" . $nameList . "'>" . $nameList . "</a></li>";
 				}
 				?>
+				<div class="total">
+					<span>Total :</span>
+					<span id="montantTotal">0 €</span>
+					<input type="hidden" name="montantTotal"></input>
+				</div>
 			</ul>
 
 			<div class='tab-content'>
@@ -115,13 +120,9 @@ if (isset($confirmation)) {
 					echo "</div>";
 				}
 				?>
+				<button class="btn pull-right btn-reserver" type='button' onClick='afficherRecap()'>Réserver</button>
 			</div>
-			<div class="total">
-				<span>Total :</span>
-				<span id="montantTotal">0 €</span>
-				<input type="hidden" name="montantTotal"></input>
-				<button class="btn" type='button' onClick='afficherRecap()'>Réserver</button>
-			</div>
+			
 		</div>
 		<center>
 			<table class="table" id='recapitulatif'>
@@ -144,40 +145,40 @@ if (isset($confirmation)) {
 <div id="surPlace" class="span7">
 	<form method=POST action="/Wandee/Reservation/ReserverSurPlace/" class="form-horizontal" 
 	onsubmit="return verificationSurPlace()">
-		<!-- Nom -->
-		<div class="control-group">
-			<label class="control-label" for="name">Nom : </label>
-			<div class="controls">
-				<input id="surPlace_name" name="name" type="text" placeholder="Nom"></input>
-			</div>
+	<!-- Nom -->
+	<div class="control-group">
+		<label class="control-label" for="name">Nom : </label>
+		<div class="controls">
+			<input id="surPlace_name" name="name" type="text" placeholder="Nom"></input>
 		</div>
-		<!-- Téléphone -->
-		<div class="control-group">
-			<label class="control-label" for="number">Téléphone : </label>
-			<div class="controls">
-				<input id="surPlace_number" name="number" type="text" maxlength=10 placeholder="Numéro de téléphone"></input>
-				<span name="surPlace_error_number">Vous devez saisir un numéro de téléphone valide.</span>
-			</div>
+	</div>
+	<!-- Téléphone -->
+	<div class="control-group">
+		<label class="control-label" for="number">Téléphone : </label>
+		<div class="controls">
+			<input id="surPlace_number" name="number" type="text" maxlength=10 placeholder="Numéro de téléphone"></input>
+			<span name="surPlace_error_number">Vous devez saisir un numéro de téléphone valide.</span>
 		</div>
-		<!-- Date -->
-		<div class="control-group">
-			<label class="control-label" for="date">Date : </label>
-			<div class="controls">
-				<input id="surPlace_date" name="date" type="text" placeholder="Date"></input>
-				<select name="moment">
-					<option value="midi">Midi</option>
-					<option value="soir">Soir</option>
-				</select>
-				<span name="surPlace_error_date">Vous devez saisir une date.</span>
-			</div>
+	</div>
+	<!-- Date -->
+	<div class="control-group">
+		<label class="control-label" for="date">Date : </label>
+		<div class="controls">
+			<input id="surPlace_date" name="date" type="text" placeholder="Date"></input>
+			<select name="moment">
+				<option value="midi">Midi</option>
+				<option value="soir">Soir</option>
+			</select>
+			<span name="surPlace_error_date">Vous devez saisir une date.</span>
 		</div>
-		<!-- Nombre de personnes -->
-		<div class="control-group">
-			<label class="control-label" for="nbPersonne">Nombre de personnes : </label>
-			<div class="controls">
-				<input class="quantity" id="surPlace_nbPersonne" name="nbPersonne" type="number" value='1' min='1' max='10'></input>
-			</div>
+	</div>
+	<!-- Nombre de personnes -->
+	<div class="control-group">
+		<label class="control-label" for="nbPersonne">Nombre de personnes : </label>
+		<div class="controls">
+			<input class="quantity" id="surPlace_nbPersonne" name="nbPersonne" type="number" value='1' min='1' max='10'></input>
 		</div>
-		<input class="pull-right btn" type="submit" value="Réserver"/>
-	</form>
+	</div>
+	<input class="pull-right btn" type="submit" value="Réserver"/>
+</form>
 </div>

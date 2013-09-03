@@ -6,7 +6,12 @@
 		85 rue de Stalingrad <br>
 		38100 Grenoble <br> <br>
 
-		04 76 49 03 93
+		04 76 49 03 93 <br><br>
+
+		<b>Du lundi au vendredi : </b><br>
+		De 11h30 à 14h30 et de 17h30 à 21h <br><br>
+		<b>Samedi : </b><br>
+		De 17h à 21h30 
 	</div>
 </center>
 
@@ -31,7 +36,7 @@ if (isset($confirmation)) {
 	<div class="control-group">
 		<label class="control-label" for="email">Email : </label>
 		<div class="controls">
-		<input id="email" name="email" type="email" placeholder="E-mail" required></input>
+			<input id="email" name="email" type="email" placeholder="E-mail" required></input>
 			<span name="error_email">Vous devez saisir une adresse email valide.</span>
 		</div>
 	</div>
@@ -39,7 +44,7 @@ if (isset($confirmation)) {
 	<div class="control-group">
 		<label class="control-label" for="message">Message : </label>
 		<div class="controls">
-		<textarea id="message" name="message"></textarea>
+			<textarea id="message" name="message"></textarea>
 			<span name="error_message">Vous devez écrire un message.</span>
 		</div>
 	</div>
