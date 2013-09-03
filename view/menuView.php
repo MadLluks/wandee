@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/wandee/css/menu.css" type="text/css" />
+
 <nav id='menuCarte' class='borderTest'>
 	<ul>
 		<li <?php if(isset($entrees)){ ?> class="active" <?php } ?>><a href='/wandee/carte/entrees/'>entrées</a></li>

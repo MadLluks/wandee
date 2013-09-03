@@ -127,37 +127,3 @@ footer {
 	color: #FFFFFF;
 	background: transparent url("/wandee/images/test.png") 0px -34px no-repeat;
 }
-
-#plats {
-	display: inline-block;
-	width: 88%;
-	height: 100%;
-	min-height: 400px;
-	/*float: left;*/
-	margin-top: 7px;
-	margin-left: 10px;
-}
-
-#image {
-	display: block;
-	max-width: 500px;
-	margin: auto;
-	margin-top: 20px;
-}
-
-#description {
-	width: 80%;
-	min-height: 100px;
-	margin: auto;	
-	margin-top: 20px;
-}
-
-.carroussel {
-	height: auto;
-	margin:0;
-	padding:0;
-}
-
-.carroussel li {
-	text-align: center;
-}

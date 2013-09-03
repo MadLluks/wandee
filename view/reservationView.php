@@ -36,7 +36,7 @@ if (isset($confirmation)) {
 </div>
 
 <div id="aEmporter">
-	<form method=POST action="/Wandee/Reservation/Reserver/" class="form-horizontal">
+	<form method=POST action="/wandee/reservation/reserver/" class="form-horizontal">
 		<div id="formulaire">
 			<!-- Nom -->
 			<div class="control-group">
@@ -143,7 +143,7 @@ if (isset($confirmation)) {
 	</form>
 </div>
 <div id="surPlace" class="span7">
-	<form method=POST action="/Wandee/Reservation/ReserverSurPlace/" class="form-horizontal" 
+	<form method=POST action="/wandee/reservation/reserverSurPlace/" class="form-horizontal" 
 	onsubmit="return verificationSurPlace()">
 	<!-- Nom -->
 	<div class="control-group">

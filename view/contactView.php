@@ -30,7 +30,7 @@ if (isset($confirmation)) {
 }
 ?>
 
-<form method=POST action="/Wandee/Contact/EnvoyerMail/" class="form-horizontal" onsubmit="return verifContenu()">
+<form method=POST action="/wandee/contact/envoyerMail/" class="form-horizontal" onsubmit="return verifContenu()">
 
 	<!-- Email -->
 	<div class="control-group">

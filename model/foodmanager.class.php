@@ -55,6 +55,21 @@ class FoodManager {
 
 	}
 
+	public function getAll() {
+		$requete = $this->db->prepare('SELECT * FROM plat');
+		$requete->execute();
+		return $requete->fetchAll(\PDO::FETCH_ASSOC);
+	}
+
+	public function getById($id) {
+		$requete = $this->db->prepare('SELECT * FROM plat WHERE id=:id');
+
+		$requete->bindValue(':id', $id);
+		$requete->execute();
+		$requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE , '\Library\Food');
+		return $requete->fetch();
+	}
+	
 	public function getList ($type) {
 		return $this->{$type.'List'};
 		/*$list = $this->{$type.'List'};

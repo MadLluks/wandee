@@ -94,7 +94,7 @@ class reservationController extends \Library\backcontroller
             }
         }
         $this->page->addVar('confirmation', 'Votre réservation a bien été prise en compte.');
-        $this->page->setContentFile(__DIR__.'/../view/reservationView.php');
+        //$this->page->setContentFile(__DIR__.'/../view/reservationView.php');
         $this->executeShow();
     }
 
@@ -122,7 +122,7 @@ class reservationController extends \Library\backcontroller
         $reservationSurPlace = new \model\reservationSurPlace($name, $number, $date, $moment, $nb);
         $manager->addReservation($reservationSurPlace);
         $this->page->addVar('confirmation', 'Votre réservation a bien été prise en compte.');
-        $this->page->setContentFile(__DIR__.'/../view/reservationView.php');
+        //$this->page->setContentFile(__DIR__.'/../view/reservationView.php');
         $this->executeShow();
     }
 }
