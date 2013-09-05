@@ -10,54 +10,84 @@
 </nav>		
 <div id='plats' class='borderTest'>
 
-	<?php echo $infos; ?>
+	<?php 
+		$phpImage = '<div class=\'carroussel\' id=\'imageLink\'>';
+    	$phpTitre = '<span>Nom : </span><div class=\'carroussel\' id=\'titre\'>';
+    	$phpPrice1 = '<span>Prix 1 : </span><div class=\'carroussel\' id=\'price1\'>';
+	    $phpPrice2 = '<span>Prix 2 : </span><div class=\'carroussel\' id=\'price2\'>';
+	    $phpPrice3 = '<span>Prix 3 : </span><div class=\'carroussel\' id=\'price3\'>';
+	    $phpDescription = '<span>Desciption : </span><div class=\'carroussel\' id=\'desc\'>';
+
+	    foreach ($listMeals as $value) {
+	      $phpImage .= '<span><img id=\''.$value->getId().'\' src=\'/wandee/images/'.$value->getImageLink().'\'/ ></span>';
+	      $phpTitre .= '<span>'.$value->getName().'</span>';
+	      $phpPrice1 .= '<span>'.$value->getPrice1().'</span>';
+	      $phpPrice2 .= '<span>'.$value->getPrice2().'</span>';
+	      $phpPrice3 .= '<span>'.$value->getPrice3().'</span>';
+	      $phpDescription .= '<span>'.$value->getDescription().'</span>';
+	    }
+
+	    $phpImage .= '</span></div><br/>';
+	    $phpTitre .= '</span></div>';
+	    $phpPrice1 .= '</span></div>';
+	    $phpPrice2 .= '</span></div>';
+	    $phpPrice3 .= '</span></div>';    
+	    $phpDescription .= '</span></div>';
+
+	    echo $phpImage . $phpTitre . $phpPrice1 . $phpPrice2 . $phpPrice3 . $phpDescription;
+	?>
 
 	<script type="text/javascript">
 	$(function () {
 		$(".carroussel").each(function () {
-			$(this).children('li').each(function () {
+			$(this).children('span').each(function () {
 				$(this).css({
 					display: 'none'
 				});
 			});
 			$(this).children(':first').css({
-				display: 'inline-block'
+				display: 'block'
 			});
 		});
 
-		if ( !$(".carroussel li:visible").first().prev().length ){
-			$("[name='<']").css('display', 'none');
-		}
-		if ( !$(".carroussel li:visible").first().next().length ){
-			$("[name='>']").css('display', 'none');
-		}
+
+
+		$(".carroussel span:visible").first().parent().append("<a href=\"#\"name='>'>></a>").append("<a href=\"#\" name='<'><</a>");
+
+		// if ( !$(".carroussel span:visible").first().prev().length ){
+		// 	$("[name='<']").css('display', 'none');
+		// }
+		// if ( !$(".carroussel span:visible").first().next().length ){
+		// 	$("[name='>']").css('display', 'none');
+		// }
 
 		$("[name='>']").click(function() {
-			$(".carroussel li:visible").each(function () {
-				$(this).next().css('display', 'inline-block');
-				$(this).css('display', 'none');
-
-				if( !$(this).next().next().length ){
-					$("[name='>']").css('display', 'none');
+			$(".carroussel span:visible").each(function () {
+				if( !$(this).next('span').length ) {
+					$(this).parent().children('span').first().css('display', 'block');
 				}
-				$("[name='<']").css('display', 'inline-block');
+				else {
+					$(this).next('span').css('display', 'block');
+				}
+				$(this).css('display', 'none');	
 			});
+			return false;
 		});
 
 		$("[name='<']").click(function() {
-			$(".carroussel li:visible").each(function () {
-				$(this).prev().css('display', 'inline-block');
-				$(this).css('display', 'none');
-
-				if( !$(this).prev().prev().length ){
-					$("[name='<']").css('display', 'none');
+			$(".carroussel span:visible").each(function () {
+				if ( !$(this).prev('span').length ) {
+					$(this).parent().children('span').last().css('display', 'block');
 				}
-				$("[name='>']").css('display', 'inline-block');
+				else {
+					$(this).prev('span').css('display', 'block');
+				}
+				$(this).css('display', 'none');
 			});
+			return false;
 		});
 	});
 
 	</script>
-	<input type="button" name="<" value="<" />
-	<input type="button" name=">" value=">" />
+	
 </div>

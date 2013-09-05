@@ -8,7 +8,7 @@
 		</div>
 		<br />
 		<div id="info">
-			<p>Cliquez n'importe où pour accéder au site.</p>
+			<p>Cliquez n'importe oÃ¹ pour accÃ©der au site.</p>
 		</div>
 	</div>
 </div>

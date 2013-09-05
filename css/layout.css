@@ -39,7 +39,7 @@ footer {
 	
 }
 
-#firstMenu span {
+#firstMenu div {
 	display: inline-block;
 }
 
@@ -126,4 +126,107 @@ footer {
 #menuCarte li.active a {
 	color: #FFFFFF;
 	background: transparent url("/wandee/images/test.png") 0px -34px no-repeat;
+}
+
+#plats {
+	display: inline-block;
+	width: 88%;
+	height: 100%;
+	min-height: 400px;
+	/*float: left;*/
+	margin-top: 7px;
+	margin-left: 10px;
+}
+
+#image {
+	display: block;
+	max-width: 500px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#description {
+	width: 80%;
+	min-height: 100px;
+	margin: auto;	
+	margin-top: 20px;
+}
+
+.carroussel {
+	height: auto;
+	margin:0;
+	padding:0;	
+}
+
+.carroussel#imageLink {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+		margin-left: 10%;
+}
+
+.carroussel#imageLink div{
+	width: auto;
+	display: block;
+}
+
+.carroussel#titre,
+.carroussel#price1,
+.carroussel#price2,
+.carroussel#price3,
+.carroussel#dess {
+	display: inline-block;
+}
+
+span img {
+	max-height: none;
+	max-width: 700px;
+}
+
+span {
+	width: auto;
+}
+
+a[name='<'] {
+	text-decoration: none;
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	font-size: 60px;
+	font-weight: 100;
+	line-height: 38px;
+	color: #ffffff;
+	text-align: center;
+	background: #222222;
+	border: 3px solid #ffffff;
+	-webkit-border-radius: 23px;
+	-moz-border-radius: 23px;
+	border-radius: 23px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+a[name='>'] {
+	text-decoration: none;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	font-size: 60px;
+	font-weight: 100;
+	line-height: 38px;
+	color: #ffffff;
+	text-align: center;
+	background: #222222;
+	border: 3px solid #ffffff;
+	-webkit-border-radius: 23px;
+	-moz-border-radius: 23px;
+	border-radius: 23px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
 }
