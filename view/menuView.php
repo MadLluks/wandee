@@ -13,28 +13,22 @@
 	<?php 
 		$phpImage = '<div class=\'carroussel\' id=\'imageLink\'>';
     	$phpTitre = '<span>Nom : </span><div class=\'carroussel\' id=\'titre\'>';
-    	$phpPrice1 = '<span>Prix 1 : </span><div class=\'carroussel\' id=\'price1\'>';
-	    $phpPrice2 = '<span>Prix 2 : </span><div class=\'carroussel\' id=\'price2\'>';
-	    $phpPrice3 = '<span>Prix 3 : </span><div class=\'carroussel\' id=\'price3\'>';
+    	$phpPrice = '<span>Prix : </span><div class=\'carroussel\' id=\'price1\'>';
 	    $phpDescription = '<span>Desciption : </span><div class=\'carroussel\' id=\'desc\'>';
 
 	    foreach ($listMeals as $value) {
 	      $phpImage .= '<span><img id=\''.$value->getId().'\' src=\'/wandee/images/'.$value->getImageLink().'\'/ ></span>';
 	      $phpTitre .= '<span>'.$value->getName().'</span>';
-	      $phpPrice1 .= '<span>'.$value->getPrice1().'</span>';
-	      $phpPrice2 .= '<span>'.$value->getPrice2().'</span>';
-	      $phpPrice3 .= '<span>'.$value->getPrice3().'</span>';
+	      $phpPrice .= '<span>'.$value->getPrice().'</span>';
 	      $phpDescription .= '<span>'.$value->getDescription().'</span>';
 	    }
 
 	    $phpImage .= '</span></div><br/>';
 	    $phpTitre .= '</span></div>';
-	    $phpPrice1 .= '</span></div>';
-	    $phpPrice2 .= '</span></div>';
-	    $phpPrice3 .= '</span></div>';    
+	    $phpPrice .= '</span></div>';   
 	    $phpDescription .= '</span></div>';
 
-	    echo $phpImage . $phpTitre . $phpPrice1 . $phpPrice2 . $phpPrice3 . $phpDescription;
+	    echo $phpImage . $phpTitre . $phpPrice . $phpDescription;
 	?>
 
 	<script type="text/javascript">

@@ -5,9 +5,7 @@ class Food {
 	protected $id;
 	protected $name;
 	protected $type;
-	protected $price1;
-	protected $price2;
-	protected $price3;
+	protected $price;
 	protected $imageLink;
 	protected $description;
 
@@ -74,16 +72,8 @@ class Food {
 		return $this->type;
 	}
 
-	public function getPrice1 () {
-		return $this->price1;
-	}
-
-	public function getPrice2 () {
-		return $this->price2;
-	}
-
-	public function getPrice3 () {
-		return $this->price3;
+	public function getPrice () {
+		return $this->price;
 	}
 
 	public function getImageLink () {
